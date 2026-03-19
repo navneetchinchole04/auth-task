@@ -40,9 +40,13 @@ docker compose up --build
 ---
 
 💡 Author
+
 👨‍💻 Navneet Chinchole
+
 🎓 B.Tech in Electronics & Computer Engineering
+
 📧 navneetchinchole04@gmail.com
+
 🔗 GitHub Profile
 
 ---

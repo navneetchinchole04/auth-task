@@ -34,5 +34,17 @@ A full-stack authentication system built with:
 
 ### Start everything
 
-```bash
+```bash```
 docker compose up --build
+
+---
+
+💡 Author
+👨‍💻 Navneet Chinchole
+🎓 B.Tech in Electronics & Computer Engineering
+📧 navneetchinchole04@gmail.com
+🔗 GitHub Profile
+
+---
+
+⭐ If you found this project useful, please give it a star on GitHub! 🌟

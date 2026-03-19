@@ -47,8 +47,8 @@ docker compose up --build
 
 📧 navneetchinchole04@gmail.com
 
-🔗 GitHub Profile
-🔗 https://github.com/navneetchinchole04
+🔗 GitHub Profile: 
+https://github.com/navneetchinchole04
 
 ---
 

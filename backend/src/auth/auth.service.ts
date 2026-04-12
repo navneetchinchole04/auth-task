@@ -16,8 +16,7 @@ export class AuthService {
       );
 
       return { message: 'User created successfully' };
-    } catch (err) {
-      // 👇 THIS IS THE IMPORTANT PART
+    } catch (err: any) {   // ✅ FIXED HERE
       if (err.code === '23505') {
         throw new BadRequestException('Email already exists');
       }

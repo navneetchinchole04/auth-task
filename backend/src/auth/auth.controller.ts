@@ -6,30 +6,31 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('signup')
-  async signup(@Body() body) {
+  async signup(@Body() body: any) {
     return this.authService.signup(body.email, body.password);
   }
 
   @Post('login')
-  async login(@Body() body, @Res() res: any) {
+  async login(@Body() body: any, @Res({ passthrough: true }) res: any) {
     const tokens = await this.authService.login(body.email, body.password);
 
     res.cookie('access_token', tokens.accessToken, {
       httpOnly: true,
-      maxAge: 15 * 60 * 1000, // 15 min
+      maxAge: 15 * 60 * 1000,
     });
 
     res.cookie('refresh_token', tokens.refreshToken, {
       httpOnly: true,
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
-    return res.send({ message: 'Logged in' });
+    return { message: 'Logged in' };
   }
 
   @Post('refresh')
-  async refresh(@Req() req: any, @Res() res: any) {
+  async refresh(@Req() req: any, @Res({ passthrough: true }) res: any) {
     const refreshToken = req.cookies.refresh_token;
+
     const token = await this.authService.refresh(refreshToken);
 
     res.cookie('access_token', token.accessToken, {
@@ -37,7 +38,7 @@ export class AuthController {
       maxAge: 15 * 60 * 1000,
     });
 
-    return res.send({ message: 'Token refreshed' });
+    return { message: 'Token refreshed' };
   }
 
   @Get('profile')

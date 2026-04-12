@@ -39,9 +39,13 @@ Signup → Login → Cookies Stored → Access Protected Routes → Refresh Toke
 
 auth-task/
 │
+
 ├── backend/        # NestJS backend
+
 ├── frontend/       # Next.js frontend
+
 ├── docker-compose.yml
+
 └── README.md
 
 ---

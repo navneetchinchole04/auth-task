@@ -38,6 +38,7 @@ Signup → Login → Cookies Stored → Access Protected Routes → Refresh Toke
 📂 Project Structure
 
 auth-task/
+
 │
 
 ├── backend/        # NestJS backend
